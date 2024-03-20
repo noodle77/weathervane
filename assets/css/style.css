@@ -141,6 +141,16 @@ margin-bottom: 2%;
     /* box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 1) !important; */
 }
 
+button:focus, input:focus {
+    outline: 1px solid var(--accent1) !important;
+    box-shadow: 0 0 3 0.125em white !important;
+}
+
+button:hover {
+    background-color: var(--accent2) !important;
+    color: var(--bulma-light) !important;
+}
+
 
 
 @media (max-width: 1400px) {
