@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>WeatherVane</title>
+</head>
+<body>
+    <header class="hero has-background-info">
+        <div class="hero-body">
+            <h1 class="has-text-centered has-text-light has-text-weight-bold">WeatherVane</h1>
+            <br>
+            <div class="is-flex is-justify-content-center">
+                <form id="search" class="field has-addons">
+                    <p class="control is-expanded">
+                        <input id="searchbar" type="text" class="input is-rounded">
+                    </p>
+                    <p class="control">
+                        <button id="searchbtn" type="submit" class="button is-rounded">Search</button>
+                    </p>
+                </form>
+            </div>
+    </header>
+    <section class="level columns is-marginless">
+        <div class="level-item column is-8 full-height-column is-paddingless is-full-mobile">
+            <div id="city" class="column-section card">
+                <h3><span id="cityName" class="has-text-dark has-text-weight-bold"></span>&nbsp;&nbsp;&nbsp;<span id="date" class="has-text-dark has-text-weight-light is-italic"></span></h3>
+                <br>
+                <p class="has-text-weight-bold">Temperature:&nbsp;<span id="temp" class="has-text-weight-light"></span><span class="has-text-weight-light">°F</span></p>
+                <br>
+                <p class="has-text-weight-bold">Wind Speed:&nbsp;<span id="wind" class="has-text-weight-light"></span>&nbsp;<span class="has-text-weight-light">MPH</span></p>
+                <br>
+                <p class="has-text-weight-bold">Humidity:&nbsp;<span id="humid" class="has-text-weight-light"></span><span class="has-text-weight-light">%</span></p>
+            </div>
+            <div id="fiveday">
+                <h3 class="has-text-dark has-text-weight-bold">5-Day Forecast</h3>
+                <div id="forecastContainer" class="days is-flex"></div>
+            </div>
+        </div>
+        <div class="level-item column is-4 is-flex full-height-column is-paddingless is-full-mobile">
+            <div id="history" class="column-section has-text-centered">
+                <!-- Search history buttons will be dynamically generated here -->
+                <button class="button is-rounded clearhistbtn">Clear History</button>
+            </div>
+        </div>
+    </section>
+    <footer class="hero has-background-info">
+        <div class="hero-body">
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+    <script type="module" src="./assets/js/script.js"></script>
+</body>
+</html>
