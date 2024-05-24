@@ -1,0 +1,191 @@
+:root {
+    --gradient-in: white;
+    --gradient-out: rgb(175, 175, 175);
+    --accent1: rgb(0, 64, 255);
+    --accent2: rgba(0, 64, 255, 0.2);
+    --static-bg: rgba(255, 255, 255, 0.25);
+}
+
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: radial-gradient(
+        var(--gradient-in), 
+        var(--gradient-out)
+        );
+    background-attachment: fixed;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: large;
+    padding-bottom: 5%;
+}
+
+#fiveday h3 {
+    font-size: large;
+    padding-bottom: 1%;
+}
+
+#forecastContainer h3 {
+    font-size: medium;
+    text-align: center;
+    padding-bottom: 7%;
+}
+
+#forecastContainer p {
+    font-size: small;
+    text-align: center;
+}
+
+.forecast-block {
+    align-content: center;
+}
+
+form {
+    width: 50%;
+}
+
+.level {
+    flex: 1;
+    align-items: flex-start !important;
+}
+
+
+.full-height-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.full-height-column-2 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.is-4 {
+    align-content: flex-start !important;
+}
+
+.column-section {
+    min-width: 100%;
+}
+
+.column-section-2 {
+    min-width: 100%;
+}
+
+.level-item {
+    padding: 3% !important;
+    align-items: normal;
+}
+
+.hero-body {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+#city {
+    padding: 2.5%;
+    border: 1px solid var(--accent1);
+    background-color: var(--static-bg);
+}
+
+#city h3 {
+    font-size: xx-large;
+}
+
+#date {
+    font-size: x-large;
+}
+
+.histbtn {
+min-width: 100%;
+margin-bottom: 2%;
+}
+
+.clearhistbtn {
+    min-width: 100%;
+    margin-top: 9%;
+}
+
+#fiveday {
+    margin-top: 2%;
+}
+
+.days {
+    min-width: 100%;
+    justify-content: space-between;
+}
+
+.days div {
+    display: inline-block;
+    min-width: 165px;
+    min-height: 200px;
+    background-color: var(--accent2);
+}
+
+button:focus, input:focus {
+    outline: 1px solid var(--accent1) !important;
+    box-shadow: 0 0 3 0.125em white !important;
+}
+
+button:hover {
+    background-color: var(--accent2) !important;
+    color: var(--bulma-light) !important;
+}
+
+
+
+@media (max-width: 1400px) {
+    .days {
+        flex-direction: column;
+    }
+    .days div {
+        min-width: 100%;
+        margin-bottom: 2%;
+
+    }
+    .forecast-block {
+        padding-left: 7%;
+    }
+    #forecastContainer h3 {
+        font-size: large;
+        text-align: start;
+        padding-top: 0%;
+        padding-bottom: 1.5%;
+    }
+    #forecastContainer p {
+        font-size: medium;
+        text-align: start;
+    }    
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+    }
+}
+
+
+
+/* 
+    !important is only being used to override Bulma's defaults, because 
+    I don't know how to write/edit sass. Otherwise, I'm aware that it's 
+    best practice to avoid using it at all.
+ */
