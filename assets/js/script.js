@@ -29,7 +29,7 @@ $(function() {
 
     // Function to fetch geographical coordinates
     function fetchGeo(city) {
-        const geoURL = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIKey}`;
+        const geoURL = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIKey}`;
 
         // Fetch city's geo data
         fetch(geoURL)
